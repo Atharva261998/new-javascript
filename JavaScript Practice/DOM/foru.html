@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript</title>
+</head>
+<body style="background-color: grey;">
+    <ul class="language">
+        <li class="list" style="color: aliceblue;">JavaScript</li>
+
+    </ul>
+</body>
+<script>
+    //ADDING THE VALUES IN THE LIST 
+
+    //this function is not reflecting using arrow function use normal function
+    // function adlan (newLanguage){   
+    //     const li=document.createElement("li")
+    //     li.innerHTML=`${newLanguage}`
+    //     document.querySelector(".list").appendChild(li)
+    // }
+    // adlan("python")
+
+    function addLanguage(adl){
+        let ele=document.createElement("li")
+        ele.appendChild(document.createTextNode(adl))
+        document.querySelector(".language").appendChild(ele)
+    }
+    addLanguage("java")
+   
+    //EDITING THE VALUES IN THE LIST OR REMOVE THE VALUES
+        let secodVal=document.querySelector("li:nth-child(2)")
+        let newVal=document.createElement("li")
+        newVal.textContent="mojo"
+        secodVal.replaceWith(newVal)
+
+     //javascript by typescript
+     let firstVal=document.querySelector("li:nth-child(1)")
+     let replaceVal=document.createElement("li")
+     replaceVal.innerHTML="Typescript"
+     firstVal.replaceWith(replaceVal)
+
+     //REMOVE ELEMENT
+     let removeEle=document.querySelector("li:nth-child(1)")
+    //  console.log(removeEle);
+     removeEle.remove();
+
+     //add few element
+     function addnew(ele){
+        let add=document.createElement("li")
+        add.appendChild(document.createTextNode(ele))
+        document.querySelector(".language").appendChild(add)
+    }
+    addnew("javascript")
+    addnew("python")
+
+    let editPython = document.querySelector("li:nth-child(3)")
+    // console.log(editPython);
+    let replace=document.createElement("li")
+    replace.innerHTML="java"
+    editPython.replaceWith(replace)
+
+    let remove =document.querySelector("li:nth-child(3)")
+    // console.log(remove);
+    remove.remove();
+    
+</script>
+</html>

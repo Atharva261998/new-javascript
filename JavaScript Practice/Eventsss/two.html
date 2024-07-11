@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chai our Code </title>
+</head>
+<body>
+    <h1>Chai our Code </h1>
+    <button id="button">Stop</button>
+</body>
+<script>
+    const changeTitle=function(){
+        document.querySelector("h1").innerHTML="Best Series ever"
+    }
+    const stopMe =setTimeout(changeTitle,5000)
+
+   
+    document.querySelector("#button").addEventListener("click",function (){
+        clearTimeout(stopMe)
+        console.log("stop")
+    })
+
+</script>
+</html>

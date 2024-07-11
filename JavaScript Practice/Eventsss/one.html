@@ -1,0 +1,81 @@
+<!-- EVENTS AND EVENT RELATED INTERVIEW QUESTIONS
+
+1.In javascript all events are run in a sequence 
+2.Events are evoke in any activity
+3. best approach to use event is to use with listeners it will give us prapogation ability
+4.INTERVIEW :- details explanation about event listeners
+5.INTERVIEW :- why we write false in event listeners after function
+
+Methods:- adEventListeners(),attachEvent():- now not in use; -->
+
+<!-- inside this e what to learn 
+what is event prapogation 
+there are two contect of event prapogation :1. event bubbling ,event capturing
+event bubbling = false mostly use in market:- it will goes from child to parent in HTML
+eevnt capturing :- true used for specific events:- it will goes from parent to child in HTML
+stopPrapogation :-is the method to used to stop the event prapogation it will not go child to parent
+after bubbling
+in specific evennts will use event capturing= true
+e.target.Tagname();
+e.target.parentNode
+events spilover :- if u want to remove the child after clicking but you removed all the list 
+this is event spillover you can prevent spilover using tagname 
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: black; color: aliceblue;";>
+    <h2>Amazing Images</h2>
+    <ul id="images">
+        <li><img width="200px" id="photoshop" src="https://th.bing.com/th/id/OIP.j14Smw22SPArjhQngvdXegHaFj?rs=1&pid=ImgDetMain" alt="photoshop"></li>
+        <li><img width="200px" id="japan" src="https://th.bing.com/th/id/OIP.rvSWtRd_oPRTwDoTCmkP5gHaE8?rs=1&pid=ImgDetMain" alt=""></li>
+        <li><img width="200px" id="river" src="https://th.bing.com/th/id/OIP.gK2gnN0Azw52PZs-J2tFtQHaE7?rs=1&pid=ImgDetMain" alt=""></li>
+        <li><img width="200px" id="owl" src="https://th.bing.com/th/id/OIP.S0XfcXMckbUZY6qwWXIlRgHaE8?w=3072&h=2048&rs=1&pid=ImgDetMain" alt="" ></li>
+        <li><img width="200px" id="prayer" src="https://th.bing.com/th/id/OIP.p722i0H-NF4Ithi2YXV9RgHaEK?rs=1&pid=ImgDetMain" alt=""></li>
+        <li><a style="color: aliceblue;" href="https://google.com" id="google">Google</a></li>
+    </ul>
+</body>
+<script>
+    // document.querySelector("#japan").addEventListener("click",function(e){
+    //     alert("japan")
+    // })
+    // // lot of interview questions ask on (e) very imp
+    // document.querySelector("#owl").addEventListener("click",function(e){
+    //     console.log(e)
+    // },false)//this false is default
+
+    // document.getElementById("images").addEventListener("click",function(e){
+    //     alert("ul is clicked")
+    // })
+    // document.getElementById("japan").addEventListener("click",function(e){
+    //     alert("japan is clicked")
+    //     e.stopPropagation();
+    // })
+    // document.getElementById("google").addEventListener("clicked",function(e){
+    //     e.preventDefault();
+    //     e.stopPropagation();
+    //     alert("just clicked the google")
+    // })
+
+// what to learn:- type keyboard type,timestamp,defaultPrevented(),target, too element, source element
+//current target
+//interview position related :- client x ,xlient y,screen x ,screen y
+//alt key, ctrkey, shift key, key code,
+//projects:- typing speed
+
+    document.querySelector("#images").addEventListener("click",function(e){
+        if(e.target.tagName ==='IMG'){
+            console.log(e.target.id)
+            e.target.tagName
+            e.target.tagName.remove(1)
+        }
+    },false)
+
+</script>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Node list creation</title>
+</head>
+<body style="background-color: black;">
+    <h1 style="background-color: white;">Create nod elist</h1>
+    
+</body>
+<script>
+    // we just created this div its in memory now for display purpose we have to attached it
+    //attaching:-
+    let Div=document.createElement("Div")
+    Div.className="divlass"
+    Div.id= Math.round(Math.random() *10+1);
+    Div.setAttribute("title","generated title")    
+    Div.style.backgroundColor="red"
+    Div.innerText="Product is available for sell"// this set attribute is overright avoide to use
+    document.body.appendChild(Div)    
+    console.log(Div);
+    
+
+</script>
+</html>
